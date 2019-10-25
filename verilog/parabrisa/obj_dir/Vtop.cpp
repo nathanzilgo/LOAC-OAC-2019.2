@@ -162,7 +162,7 @@ VL_INLINE_OPT void Vtop::_sequent__TOP__3(Vtop__Syms* __restrict vlSymsp) {
 						 : 0U));
 	} else {
 	    if ((1U == (IData)(vlTOPp->top__DOT__state))) {
-		if ((4U > (IData)(vlTOPp->top__DOT__contadorGotas))) {
+		if ((3U > (IData)(vlTOPp->top__DOT__contadorGotas))) {
 		    __Vdly__top__DOT__state = 0U;
 		    __Vdly__top__DOT__contador3 = 0U;
 		    __Vdly__top__DOT__contador5 = 0U;

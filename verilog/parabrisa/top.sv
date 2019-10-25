@@ -36,12 +36,12 @@ end
 retarda o clock em 1/2
 */
 always_ff@(posedge clk_2)begin
-	 clk_3 <= !clk_3 ; 
+	 clk_3 <= !clk_3 ;
 end
 /*
 Faz a baguncinha na california
 */
-always_ff@(posedge clk_3)begin
+always_ff@(posedge clk_3 or posedge reset)begin
 
 	if(reset)begin
 				state <= off;
@@ -101,19 +101,19 @@ always_ff@(posedge clk_3)begin
 					contador3 <= 0;
 				end
 
-				fast:
-					if(contadorGotas < 4)begin
-						state <= off;
-						contador3 <= 0;
-						contador5 <= 0;
+			fast:
+				if(contadorGotas < 4)begin
+					state <= off;
+					contador3 <= 0;
+					contador5 <= 0;
 				end
-					else if(contadorGotas >= 3 && contadorGotas < 6)begin
-						state <= slow;
-						contador5 <= 0;
-					end
-					else if(contadorGotas > 5)begin
-						state <= fast;
-					end 
+				else if(contadorGotas >= 3 && contadorGotas < 6)begin
+					state <= slow;
+					contador5 <= 0;
+				end
+				else if(contadorGotas > 5)begin
+					state <= fast;
+				end 
 			endcase
 
 		end
