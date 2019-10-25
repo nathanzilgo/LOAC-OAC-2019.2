@@ -50,22 +50,23 @@ always_ff@(posedge clk_3)begin
 
 	end 
 
+	// Se não for reset
 	else begin
 		contadorGotas <= (SWI[0] + SWI[1] + SWI[2] + SWI[3] + SWI[4] + SWI[5] + SWI[6]);
 
 		if(contadorGotas >= 3 && contadorGotas < 6)begin
 					contador3 <= contador3 + 1;
 					contador5 <= 0;
-				end
+		end
 		else if (contadorGotas >= 5)begin
 			contador5 <= contador5 + 1;
 			contador3 <= contador3 + 1;            
-			end
+		end
 		else begin
 			contador3 <= 0;
 			contador5 <= 0;
-			end
 		end
+		
 
 		unique case (state)
 			off:
@@ -81,7 +82,7 @@ always_ff@(posedge clk_3)begin
 				end
 
 			slow:
-				if(contadorGotas < 4)begin
+				if(contadorGotas < 3)begin
 					
 					state <= off;
 					contador3 <= 0;
@@ -116,7 +117,7 @@ always_ff@(posedge clk_3)begin
 			endcase
 
 		end
-		
+end	
 
 /*
 Exibe as saídas

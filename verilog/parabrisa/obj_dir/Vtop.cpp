@@ -108,7 +108,7 @@ VL_INLINE_OPT void Vtop::_settle__TOP__2(Vtop__Syms* __restrict vlSymsp) {
     // ALWAYS at top.sv:30
     vlTOPp->top__DOT__reset = (1U & ((IData)(vlTOPp->SWI) 
 				     >> 7U));
-    // ALWAYS at top.sv:124
+    // ALWAYS at top.sv:125
     vlTOPp->LED = ((0x7fU & (IData)(vlTOPp->LED)) | 
 		   ((IData)(vlTOPp->top__DOT__clk_3) 
 		    << 7U));
@@ -153,6 +153,55 @@ VL_INLINE_OPT void Vtop::_sequent__TOP__3(Vtop__Syms* __restrict vlSymsp) {
 		__Vdly__top__DOT__contador5 = 0U;
 	    }
 	}
+	if ((0U == (IData)(vlTOPp->top__DOT__state))) {
+	    __Vdly__top__DOT__state = (((3U <= (IData)(vlTOPp->top__DOT__contador3)) 
+					& (2U > (IData)(vlTOPp->top__DOT__contador5)))
+				        ? 1U : ((2U 
+						 <= (IData)(vlTOPp->top__DOT__contador5))
+						 ? 2U
+						 : 0U));
+	} else {
+	    if ((1U == (IData)(vlTOPp->top__DOT__state))) {
+		if ((4U > (IData)(vlTOPp->top__DOT__contadorGotas))) {
+		    __Vdly__top__DOT__state = 0U;
+		    __Vdly__top__DOT__contador3 = 0U;
+		    __Vdly__top__DOT__contador5 = 0U;
+		} else {
+		    if ((2U <= (IData)(vlTOPp->top__DOT__contador5))) {
+			__Vdly__top__DOT__state = 2U;
+		    } else {
+			if (((6U > (IData)(vlTOPp->top__DOT__contadorGotas)) 
+			     & (3U <= (IData)(vlTOPp->top__DOT__contadorGotas)))) {
+			    __Vdly__top__DOT__contador5 = 0U;
+			    __Vdly__top__DOT__state = 1U;
+			} else {
+			    if ((4U > (IData)(vlTOPp->top__DOT__contadorGotas))) {
+				__Vdly__top__DOT__state = 0U;
+				__Vdly__top__DOT__contador3 = 0U;
+			    }
+			}
+		    }
+		}
+	    } else {
+		if ((2U == (IData)(vlTOPp->top__DOT__state))) {
+		    if ((4U > (IData)(vlTOPp->top__DOT__contadorGotas))) {
+			__Vdly__top__DOT__state = 0U;
+			__Vdly__top__DOT__contador3 = 0U;
+			__Vdly__top__DOT__contador5 = 0U;
+		    } else {
+			if (((3U <= (IData)(vlTOPp->top__DOT__contadorGotas)) 
+			     & (6U > (IData)(vlTOPp->top__DOT__contadorGotas)))) {
+			    __Vdly__top__DOT__state = 1U;
+			    __Vdly__top__DOT__contador5 = 0U;
+			} else {
+			    if ((5U < (IData)(vlTOPp->top__DOT__contadorGotas))) {
+				__Vdly__top__DOT__state = 2U;
+			    }
+			}
+		    }
+		}
+	    }
+	}
 	__Vdly__top__DOT__contadorGotas = (0xffU & 
 					   (((((((1U 
 						  & (IData)(vlTOPp->SWI)) 
@@ -175,53 +224,6 @@ VL_INLINE_OPT void Vtop::_sequent__TOP__3(Vtop__Syms* __restrict vlSymsp) {
 					    + (1U & 
 					       ((IData)(vlTOPp->SWI) 
 						>> 6U))));
-    }
-    if ((0U == (IData)(vlTOPp->top__DOT__state))) {
-	__Vdly__top__DOT__state = (((3U <= (IData)(vlTOPp->top__DOT__contador3)) 
-				    & (2U > (IData)(vlTOPp->top__DOT__contador5)))
-				    ? 1U : ((2U <= (IData)(vlTOPp->top__DOT__contador5))
-					     ? 2U : 0U));
-    } else {
-	if ((1U == (IData)(vlTOPp->top__DOT__state))) {
-	    if ((4U > (IData)(vlTOPp->top__DOT__contadorGotas))) {
-		__Vdly__top__DOT__state = 0U;
-		__Vdly__top__DOT__contador3 = 0U;
-		__Vdly__top__DOT__contador5 = 0U;
-	    } else {
-		if ((2U <= (IData)(vlTOPp->top__DOT__contador5))) {
-		    __Vdly__top__DOT__state = 2U;
-		} else {
-		    if (((6U > (IData)(vlTOPp->top__DOT__contadorGotas)) 
-			 & (3U <= (IData)(vlTOPp->top__DOT__contadorGotas)))) {
-			__Vdly__top__DOT__contador5 = 0U;
-			__Vdly__top__DOT__state = 1U;
-		    } else {
-			if ((4U > (IData)(vlTOPp->top__DOT__contadorGotas))) {
-			    __Vdly__top__DOT__state = 0U;
-			    __Vdly__top__DOT__contador3 = 0U;
-			}
-		    }
-		}
-	    }
-	} else {
-	    if ((2U == (IData)(vlTOPp->top__DOT__state))) {
-		if ((4U > (IData)(vlTOPp->top__DOT__contadorGotas))) {
-		    __Vdly__top__DOT__state = 0U;
-		    __Vdly__top__DOT__contador3 = 0U;
-		    __Vdly__top__DOT__contador5 = 0U;
-		} else {
-		    if (((3U <= (IData)(vlTOPp->top__DOT__contadorGotas)) 
-			 & (6U > (IData)(vlTOPp->top__DOT__contadorGotas)))) {
-			__Vdly__top__DOT__state = 1U;
-			__Vdly__top__DOT__contador5 = 0U;
-		    } else {
-			if ((5U < (IData)(vlTOPp->top__DOT__contadorGotas))) {
-			    __Vdly__top__DOT__state = 2U;
-			}
-		    }
-		}
-	    }
-	}
     }
     vlTOPp->top__DOT__contadorGotas = __Vdly__top__DOT__contadorGotas;
     vlTOPp->top__DOT__contador3 = __Vdly__top__DOT__contador3;
