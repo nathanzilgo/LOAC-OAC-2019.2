@@ -22,7 +22,7 @@ logic clk_3 ;
 logic[7:0] contadorGotas;
 logic[15:0] contador3;
 logic[15:0] contador5;
-logic [2:0] limpador ; 
+
 
 /*
 Atribui os switchs as variaveis
@@ -40,6 +40,7 @@ always_ff@(posedge clk_2)begin
 end
 /*
 Faz a baguncinha na california
+RESET ASSINCRONO: (posedge clk or posedge reset)
 */
 always_ff@(posedge clk_3 or posedge reset)begin
 
