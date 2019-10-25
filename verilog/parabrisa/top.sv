@@ -45,9 +45,9 @@ RESET ASSINCRONO: (posedge clk or posedge reset)
 always_ff@(posedge clk_3 or posedge reset)begin
 
 	if(reset)begin
-				state <= off;
-				contador3 <= 0; 
-				contador5 <= 0;
+		state <= off;
+		contador3 <= 0; 
+		contador5 <= 0;
 
 	end 
 
