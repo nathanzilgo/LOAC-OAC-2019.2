@@ -1,0 +1,27 @@
+Arduino: 1.8.10 (Linux), Placa:"NodeMCU 1.0 (ESP-12E Module), 80 MHz, Flash, Legacy (new can return nullptr), All SSL ciphers (most compatible), 4MB (FS:2MB OTA:~1019KB), 2, v2 Lower Memory, Disabled, None, Only Sketch, 115200"
+
+Executable segment sizes:
+IRAM   : 27860   / 32768 - code in IRAM          (ICACHE_RAM_ATTR, ISRs...) 
+DATA   : 1252  )         - initialized variables (global, static) in RAM/HEAP 
+BSS    : 24976 )         - zeroed variables      (global, static) in RAM/HEAP 
+IROM   : 233056          - code in flash         (default or ICACHE_FLASH_ATTR) 
+RODATA : 784   ) / 81920 - constants             (global, static) in RAM/HEAP 
+O sketch usa 262952 bytes (25%) de espaço de armazenamento para programas. O máximo são 1044464 bytes.
+Variáveis globais usam 27012 bytes (32%) de memória dinâmica, deixando 54908 bytes para variáveis locais. O máximo são 81920 bytes.
+esptool.py v2.8
+Serial port /dev/ttyUSB0
+Connecting........_____....._____....._____....._____....._____....._____.....____Traceback (most recent call last):
+  File "/home/void/.arduino15/packages/esp8266/hardware/esp8266/2.6.2/tools/upload.py", line 65, in <module>
+    esptool.main(cmdline)
+  File "/home/void/.arduino15/packages/esp8266/hardware/esp8266/2.6.2/tools/esptool/esptool.py", line 2890, in main
+    esp.connect(args.before)
+  File "/home/void/.arduino15/packages/esp8266/hardware/esp8266/2.6.2/tools/esptool/esptool.py", line 483, in connect
+    raise FatalError('Failed to connect to %s: %s' % (self.CHIP_NAME, last_error))
+esptool.FatalError: Failed to connect to ESP8266: Timed out waiting for packet header
+esptool.FatalError: Failed to connect to ESP8266: Timed out waiting for packet header
+
+_
+
+Este relatório teria mais informações com
+"Mostrar a saida detalhada durante a compilação"
+opção pode ser ativada em "Arquivo -> Preferências"
