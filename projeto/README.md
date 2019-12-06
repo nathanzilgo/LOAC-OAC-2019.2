@@ -29,4 +29,4 @@ utilizado no codigo.
 
 Conhecimentos explorados: foi necessária uma grande pesquisa devido a falta de experiencia na aréa principalmente devido ao uso da placa esp8266-12E principalmente na parte eletrica e na utilização da IDE arduino.
 
-Tem 3 codigos diferentes porem o utilizado e que deu certo está na pasta sketch_dec06a
+Tem 3 codigos diferentes porem o utilizado e que deu certo está na pasta exemplo_sem_ip
