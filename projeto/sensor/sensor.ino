@@ -27,17 +27,17 @@ RST> D0 for wakeup (GPIO16/WAKE on NodeMCU)
 NOTE: RST line wakeup Jumper must be removed to program!!!!!!!!!!!!!!
 */
 
-//#include <ESP8266WiFi.h>
-const char* ssid     = "xxxxxxxxxxxxxxxxxxxx";      // SSID of local network---------------------USER Input here
-const char* password = "xxxxxxx";   // Password on network -----------------------------------------------------
+#include <ESP8266WiFi.h>
+const char* ssid     = "GVT-E117";      // SSID of local network---------------------USER Input here
+const char* password = "1803001438";   // Password on network -----------------------------------------------------
 String result;
 float h = 111;
 float t = 222;
-//#include "DHT.h"
+#include "DHT.h"
 #define DHTPIN 0     // GPIO 0 on ESP12E Lolin is labelled pin D3 
 // Uncomment whatever type you're using!
-#define DHTTYPE DHT11   // DHT 11 
-//#define DHTTYPE DHT22   // DHT 22  (AM2302)
+//#define DHTTYPE DHT11   // DHT 11 
+#define DHTTYPE DHT22   // DHT 22  (AM2302)
 //#define DHTTYPE DHT21   // DHT 21 (AM2301)
 
 // Connect pin 1 (on the left) of the sensor to +5V

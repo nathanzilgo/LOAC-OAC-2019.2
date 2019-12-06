@@ -5,14 +5,6 @@
 
 DHT dht(DHTPIN, DHTTYPE);
 
-byte grau[8] = {B00001100,
-                B00010010,
-                B00010010,
-                B00001100,
-                B00000000,
-                B00000000,
-                B00000000,
-                B00000000,};
 void setup(){
 
   Serial.begin(9600);
