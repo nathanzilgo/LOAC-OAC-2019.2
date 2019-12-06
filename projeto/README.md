@@ -24,4 +24,14 @@ Projetos com finalidade de medir umidade e temperatura ambiente utilizando Ardui
 
 – Proposta da prática:
 
-Utilizar o Sensor de Umidade e Temperatura DHT22 / AM2302 em conjunto com o Arduino e medir umidade e temperatura ambiente. O valor da umidade e da temperatura serão exibidos no monitor serial do ambiente de programação do Arduino.
+Utilizar o Sensor de Umidade e Temperatura DHT22 / AM2302 em conjunto com o Arduino e medir umidade e temperatura ambiente. O valor da umidade e da temperatura serão exibidos em uma pagina javascript da rede wifi local.
+
+
+Sobre o projeto:
+
+na pasta sketch_dec06a: se teve uma tentativa de conectar com uma pagina javascript no browser pela praticidade,contudo houve
+problemas na conexão com rede wifi houve tentativa em 5 redes wifi diferentes,se tratando provalmente um erro ou de hardware ou de configuração,quanto a configuração foi tentada a correção de varias maneiras diferentes.
+
+na pasta sensor: se teve outra tentativa de conexão com a internet com um codigo feito de uma maneira diferente porém nem o programa não compilou.
+
+na pasta teste2sensorDHT:depois das duas tentativas falhas tentamos testar a conexão por meio desse codigo porem sem resultado esperado de nenhuma maneira.
